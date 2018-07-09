@@ -85,7 +85,7 @@ int Board::drop_piece(int x, int y)
 	for (int i = 1; board[y][x - i] == this->current_player; i++) {
 		length4++;
 	}
-	if (length1 == 5 || length2 == 5 || length3 == 5 || length4 == 5)
+	if (length1 >= 5 || length2 >= 5 || length3 >= 5 || length4 >= 5)
 		return this->current_player;
 	else {
 		if (this->current_player == BLACK)
